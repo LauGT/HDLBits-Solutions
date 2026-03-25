@@ -1,31 +1,41 @@
-# 🚀 HDLBits 修行日志
+# HDLBits Verilog 学习与实践记录
 
-本项目记录了我从大四开始，利用 VS Code + Git 环境刷 [HDLBits](https://hdlbits.01xz.net/) 的全过程。
-目标是：**在研一开学前，彻底掌握 Verilog 核心语法与时序逻辑设计。**
-
----
-
-## 📊 刷题进度 (2026-03-25 更新)
-| 章节 (Sections)      | 题目总数 | 已完成 | 状态   |
-| :------------------- | :------: | :----: | :----- |
-| **Getting Started**  |    2     |   2    | 100% ✅ |
-| **Verilog Language** |    35    |   0    | 0%     |
-| **Circuits**         |   100+   |   0    | 0%     |
+本项目用于记录个人基于 [HDLBits](https://hdlbits.01xz.net/) 平台的 Verilog 硬件描述语言学习过程，以及相关的数字逻辑电路设计实践。项目旨在通过系统性的练习，掌握 Verilog 核心语法，并建立规范的 RTL (Register Transfer Level) 设计流程。
 
 ---
 
-## 🛠️ 我的“现代”开发环境
-* **编辑器**: VS Code (搭配 Verilog-HDL 插件)
-* **版本控制**: Git + GitHub (TUN 模式/代理推送)
-* **代码规范**: 采用 `Getting_Started/` 等文件夹分类管理
+## 刷题进度 (更新至 2026-03-25)
+
+| 章节 (Section)       | 题目总数 (Total) | 已完成 (Completed) | 进度 (Progress) |
+| :------------------- | :--------------: | :----------------: | :-------------- |
+| **Getting Started**  |        2         |         2          | 100%            |
+| **Verilog Language** |        41        |         8          | 20%             |
+| **Circuits**         |       100+       |         0          | 0%              |
 
 ---
 
-## 📝 学习笔记
-* **[2026-03-25]**: 成功打通 VS Code + Git + GitHub 的全链路，配置了 `.gitignore` 过滤无关文件。
-* **[2026-03-25]**: 完成了 `Step_one.v` 与 `Zero.v`，正式通关 Getting Started 章节！掌握了基本的 `module` 端口声明，以及使用 `assign` 进行连续赋值和输出恒定电平（如 `1'b0`）。
+## 开发环境与版本控制
+
+* **代码编辑器**: Visual Studio Code (集成 Verilog-HDL 插件)
+* **语法检查**: Vivado xvlog (实时 Linting)
+* **版本控制**: Git + GitHub
+* **工程规范**: 采用模块化目录结构，按题库章节分类归档
 
 ---
 
-## 📫 开发者
-* **Name**: LauGT (电子信息工程 @ 大四)
+## 学习与开发日志
+
+### 2026-03-25
+* **环境初始化**: 建立 Git 本地仓库并关联远程仓库，配置 `.gitignore` 过滤仿真缓存与编译生成文件。
+* **Getting Started**: 完成基础章节。掌握模块声明 (`module`)、端口定义及连续赋值语句 (`assign`) 的规范写法。
+* **Verilog Language (Basics)**: 推进基础语法练习至 7458 芯片逻辑实现。
+  * 掌握基础逻辑门（AND, OR, NOT, XOR）的 Verilog 表达方式。
+  * 熟悉内部线网 (`wire`) 的声明，并应用于复杂组合逻辑电路的结构化拆解。
+* **实战验证 (`led_twinkle.v`)**: 独立编写带参数化设计的 LED 闪烁时序逻辑代码。对比验证并总结了阻塞赋值 (`=`) 与非阻塞赋值 (`<=`) 在底层硬件电路综合上的本质差异。
+
+---
+
+## 开发者信息
+
+* **Author**: LauGT
+* **Major**: 电子信息工程 (B.Eng.) / 微电子学 (Prospective M.Eng.)
